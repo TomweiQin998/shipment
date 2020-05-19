@@ -6,13 +6,13 @@ package com.infosys.shipment.service;
  */
 public interface ShipmentInterface {
 
-	public double[] split(double totalQuantity,int version);
+	public double[] split(double totalQuantity,int version,int splitOrMerge,double increateRootQuantity,double decreaseRootQuantity);
 	
-	public double merge(double aQuantity,double bQuantity);
+	public double[] merge(double totalQuantity,int version,int splitOrMerge,double increateRootQuantity,double decreaseRootQuantity);
 	
-	public double[] increateRootQuantity(double totalQuantity,int version);
+	public double[] increateRootQuantity(double totalQuantity,int version,int splitOrMerge,double increateRootQuantity,double decreaseRootQuantity);
 	
-	public double[] decreaseRootQuantity(double totalQuantity,int version);
+	public double[] decreaseRootQuantity(double totalQuantity,int version,int splitOrMerge,double increateRootQuantity,double decreaseRootQuantity);
 	
 	
 }

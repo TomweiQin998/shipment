@@ -68,7 +68,7 @@ maxlength="8">
 </td>
 <td>
 <font size="+1">
-<select id="select" style="width:120px;height:25px">
+<select id="select" name="SplitOrMerge" style="width:120px;height:25px">
 <option value="0">--请选择--</option>
 <option value="1">拆分装运</option>
 <option value="2">合并装运</option>
@@ -80,12 +80,25 @@ maxlength="8">
 <tr>
 <td align="right">
 <font size="+1">
-<B>更改根数量</B>
+<B>添加根数量</B>
 </font>
 </td>
 <td>
 <font size="+1">
-<input type="number" name="totalWeight"
+<input type="number" name="increateRootQuantity"
+maxlength="8">
+</font>
+</td>
+</tr>
+<tr>
+<td align="right">
+<font size="+1">
+<B>减少根数量</B>
+</font>
+</td>
+<td>
+<font size="+1">
+<input type="number" name="decreaseRootQuantity"
 maxlength="8">
 </font>
 </td>
