@@ -9,9 +9,9 @@ import java.util.List;
  */
 public class Order implements Serializable{
 
-	private String orderNo;
+	private long orderNo;
 
-	private String orderContent;
+	private int orderQuantity;
 
 	private OrderDetail orderDetail;
 
@@ -19,23 +19,20 @@ public class Order implements Serializable{
 
 	private List<Ship> ship;
 	
-	
-	
 
-	public String getOrderNo() {
+
+	public long getOrderNo() {
 		return orderNo;
 	}
 
-	public void setOrderNo(String orderNo) {
+	public void setOrderNo(long orderNo) {
 		this.orderNo = orderNo;
 	}
 
-	public String getOrderContent() {
-		return orderContent;
-	}
 
-	public void setOrderContent(String orderContent) {
-		this.orderContent = orderContent;
+
+	public Order() {
+		
 	}
 
 	public OrderDetail getOrderDetail() {
@@ -62,4 +59,14 @@ public class Order implements Serializable{
 		this.ship = ship;
 	}
 
+	public int getOrderQuantity() {
+		return orderQuantity;
+	}
+
+	public void setOrderQuantity(int orderQuantity) {
+		this.orderQuantity = orderQuantity;
+	}
+
+	
+	
 }

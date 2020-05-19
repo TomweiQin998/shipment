@@ -1,26 +1,27 @@
 package com.infosys.shipment.pojo;
 
 import java.io.Serializable;
-import java.util.List;
+
 /**
  * 
  * @author Tomwei_Qin
  *
  */
 public class OrderDetail implements Serializable{
-	private String orderNo;
+	private long orderNo;
 
 	private String orderContent;
 
-	private List<Ship> ship;
+	private Ship[] ships;
 
 	private double price;
 
-	public String getOrderNo() {
+
+	public long getOrderNo() {
 		return orderNo;
 	}
 
-	public void setOrderNo(String orderNo) {
+	public void setOrderNo(long orderNo) {
 		this.orderNo = orderNo;
 	}
 
@@ -32,13 +33,6 @@ public class OrderDetail implements Serializable{
 		this.orderContent = orderContent;
 	}
 
-	public List<Ship> getShip() {
-		return ship;
-	}
-
-	public void setShip(List<Ship> ship) {
-		this.ship = ship;
-	}
 
 	public double getPrice() {
 		return price;
@@ -47,5 +41,15 @@ public class OrderDetail implements Serializable{
 	public void setPrice(double price) {
 		this.price = price;
 	}
+
+	public Ship[] getShips() {
+		return ships;
+	}
+
+	public void setShips(Ship[] ships) {
+		this.ships = ships;
+	}
+
+
 
 }

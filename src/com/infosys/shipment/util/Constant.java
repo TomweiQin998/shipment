@@ -4,6 +4,8 @@ package com.infosys.shipment.util;
  * @author Tomwei_Qin
  *
  */
+
+
 public class Constant {
 	//大型 船只的最大负载量为80,100,160各一艘
 	 public static final int bigShipMaxload_160  = 160;
@@ -22,6 +24,5 @@ public class Constant {
 	 public static final int smallShipMaxload_15  = 15;
 	 public static final int smallShipMaxload_10  = 10;
 
-	
 
 }
