@@ -1,4 +1,7 @@
 package com.infosys.shipment.service;
+
+import com.infosys.shipment.pojo.Order;
+
 /**
  * 
  * @author Tomwei_Qin
@@ -6,13 +9,14 @@ package com.infosys.shipment.service;
  */
 public interface ShipmentInterface {
 
-	public double[] split(double totalQuantity,String orderNo,int version,int splitOrMerge,double increateRootQuantity,double decreaseRootQuantity);
+	public Order split(int totalQuantity,int version,int splitOrMerge,int increateRootQuantity,int decreaseRootQuantity);
 	
-	public double[] merge(double totalQuantity,String orderNo,int version,int splitOrMerge,double increateRootQuantity,double decreaseRootQuantity);
+	public Order merge(int totalQuantity,int version,int splitOrMerge,int increateRootQuantity,int decreaseRootQuantity);
 	
-	public double[] increateRootQuantity(double totalQuantity,String orderNo,int version,int splitOrMerge,double increateRootQuantity,double decreaseRootQuantity);
+	public Order increateRootQuantity(int totalQuantity,int version,int splitOrMerge,int increateRootQuantity,int decreaseRootQuantity);
 	
-	public double[] decreaseRootQuantity(double totalQuantity,String orderNo,int version,int splitOrMerge,double increateRootQuantity,double decreaseRootQuantity);
+	public Order decreaseRootQuantity(int totalQuantity,int version,int splitOrMerge,int increateRootQuantity,int decreaseRootQuantity);
 	
+	public Order createOrder(int totalQuantity,int version,int splitOrMerge,int increateRootQuantity,int decreaseRootQuantity);
 	
 }

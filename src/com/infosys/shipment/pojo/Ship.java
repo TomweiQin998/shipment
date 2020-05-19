@@ -14,7 +14,7 @@ public class Ship implements Serializable {
 	private String type;// 船型号大小:1大型，2中型，3小型
 	private int version;// 货运批次
 	private String status;// 船只使用状态
-	private String orderNo;// 订单号
+
 
 	public Ship() {
 	}
@@ -74,12 +74,7 @@ public class Ship implements Serializable {
 		this.status = status;
 	}
 
-	public String getOrderNo() {
-		return orderNo;
-	}
 
-	public void setOrderNo(String orderNo) {
-		this.orderNo = orderNo;
-	};
+
 
 }
