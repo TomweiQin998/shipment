@@ -29,10 +29,9 @@ public class ShipmentImpl implements ShipmentInterface {
 		final long orderNo = System.currentTimeMillis();
 		order = new Order();		
 		
-		int sumQuantity = totalQuantity + increateRootQuantity - decreaseRootQuantity;
+		int sumQuantity = totalQuantity;
 		System.out.println("待运货物总吨数："+sumQuantity);
 		
-		version=(int) Math.ceil(sumQuantity/600);//自动计算运输批次=待运货物总吨数/现有船只全部装满总吨数600吨
 		System.out.println("总运输批次："+version);		
 	
 		System.out.println("拆分或合并操作："+splitOrMerge);
@@ -130,6 +129,7 @@ public class ShipmentImpl implements ShipmentInterface {
 	public Order split(int totalQuantity, int version, int splitOrMerge, int increateRootQuantity,
 			int decreaseRootQuantity) {
 		Order order = null;
+		splitOrMerge=1;
 		order = createOrder(totalQuantity, version, splitOrMerge, increateRootQuantity, decreaseRootQuantity);
 		return order;
 	}
@@ -141,6 +141,7 @@ public class ShipmentImpl implements ShipmentInterface {
 	public Order merge(int totalQuantity, int version, int splitOrMerge, int increateRootQuantity,
 			int decreaseRootQuantity) {
 		Order order = null;
+		splitOrMerge=2;
 		order = createOrder(totalQuantity, version, splitOrMerge, increateRootQuantity, decreaseRootQuantity);
 
 		return order;
@@ -152,7 +153,8 @@ public class ShipmentImpl implements ShipmentInterface {
 	public Order increateRootQuantity(int totalQuantity, int version, int splitOrMerge, int increateRootQuantity,
 			int decreaseRootQuantity) {
 		Order order = null;
-		order = createOrder(totalQuantity, version, splitOrMerge, increateRootQuantity,
+		int sumTotalQuantity=totalQuantity+increateRootQuantity;
+		order = createOrder(sumTotalQuantity, version, splitOrMerge, increateRootQuantity,
 				decreaseRootQuantity);
 
 
@@ -166,7 +168,8 @@ public class ShipmentImpl implements ShipmentInterface {
 	public Order decreaseRootQuantity(int totalQuantity, int version, int splitOrMerge, int increateRootQuantity,
 			int decreaseRootQuantity) {
 		Order order = null;
-		order = createOrder(totalQuantity, version, splitOrMerge, increateRootQuantity,
+		int sumTotalQuantity=totalQuantity+decreaseRootQuantity;
+		order = createOrder(sumTotalQuantity, version, splitOrMerge, increateRootQuantity,
 				decreaseRootQuantity);
 
 		return order;
