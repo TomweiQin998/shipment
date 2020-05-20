@@ -8,7 +8,7 @@ import com.infosys.shipment.pojo.Ship;
 import com.infosys.shipment.util.Constant;
 
 /**
- * 采用双锁机制，安全且在多线程情况下能保持高性能。
+ * 单例模式:采用双锁机制，安全且在多线程情况下能保持高性能。
  * 
  * @author Tomwei_Qin
  *

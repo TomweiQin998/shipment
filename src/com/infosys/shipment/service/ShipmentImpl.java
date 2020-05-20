@@ -32,7 +32,7 @@ public class ShipmentImpl implements ShipmentInterface {
 		int sumQuantity = totalQuantity + increateRootQuantity - decreaseRootQuantity;
 		System.out.println("待运货物总吨数："+sumQuantity);
 		
-		version=(int) Math.ceil(sumQuantity/600+1);//自动计算运输批次=待运货物总吨数/现有船只全部装满总吨数600吨+1
+		version=(int) Math.ceil(sumQuantity/600);//自动计算运输批次=待运货物总吨数/现有船只全部装满总吨数600吨
 		System.out.println("总运输批次："+version);		
 	
 		System.out.println("拆分或合并操作："+splitOrMerge);
