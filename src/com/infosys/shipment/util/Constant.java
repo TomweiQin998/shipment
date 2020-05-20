@@ -6,7 +6,7 @@ package com.infosys.shipment.util;
  */
 
 
-public class Constant {
+public class Constant {//11只船总运量590吨所有船装满
 	//大型 船只的最大负载量为80,100,160各一艘
 	 public static final int bigShipMaxload_160  = 160;
 	 public static final int bigShipMaxload_100  = 100;
