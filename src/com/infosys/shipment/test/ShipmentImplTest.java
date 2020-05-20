@@ -5,6 +5,11 @@ import com.infosys.shipment.pojo.OrderDetail;
 import com.infosys.shipment.pojo.Ship;
 import com.infosys.shipment.service.ShipmentImpl;
 
+/**
+ * 测试
+ * @author Tomwei_Qin
+ *
+ */
 public class ShipmentImplTest {
 
 	public static void main(String[] args) {
