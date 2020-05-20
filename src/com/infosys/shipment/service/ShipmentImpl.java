@@ -32,7 +32,7 @@ public class ShipmentImpl implements ShipmentInterface {
 		int sumQuantity = totalQuantity + increateRootQuantity - decreaseRootQuantity;
 		System.out.println("待运货物总吨数："+sumQuantity);
 		
-		version=(int) Math.ceil(sumQuantity/590+1);//自动计算运输批次
+		version=(int) Math.ceil(sumQuantity/600+1);//自动计算运输批次=待运货物总吨数/现有船只全部装满总吨数600吨+1
 		System.out.println("总运输批次："+version);		
 	
 		System.out.println("拆分或合并操作："+splitOrMerge);
@@ -41,7 +41,7 @@ public class ShipmentImpl implements ShipmentInterface {
 		
 		System.out.println("减少运货总吨数："+increateRootQuantity);
 		
-		if (sumQuantity > 0 && sumQuantity <=590 && version==1) {//11只船总运量590吨所有船装满		
+		if (sumQuantity > 0 && sumQuantity <=600 && version==1) {//13只船总运量600吨所有船装满		
 
 			order.setOrderNo(orderNo);
 			order.setOrderQuantity(sumQuantity);
@@ -78,7 +78,7 @@ public class ShipmentImpl implements ShipmentInterface {
 			details.setOrderNo(orderNo);
 			details.setShips(ships);
 			order.setOrderDetail(details);
-		}else if (sumQuantity > 590 && version > 1) {//11只船总运量590吨所有船装满  则需要 分批次运货 version批次
+		}else if (sumQuantity > 600 && version > 1) {//13只船总运量600吨所有船装满  则需要 分批次运货 version批次
 			System.out.println("货运量超过所有船只最大负载总量  分批次运货");
 
 			order.setOrderNo(orderNo);

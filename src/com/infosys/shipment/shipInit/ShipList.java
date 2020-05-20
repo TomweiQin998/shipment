@@ -23,7 +23,7 @@ public final class ShipList implements Serializable {
 	private volatile static ShipList instance;
 
 	private ShipList() {
-		shipList = new ArrayList<Ship>(3); // 初始化3只船
+		shipList = new ArrayList<Ship>(3); // 初始化13只船
 		final Ship ship1 = new Ship();
 		ship1.setShipNo("shipNo" + 1); // 船只编号
 		ship1.setMaximumload(Constant.bigShipMaxload_160); // 船只最大负载量		
@@ -95,6 +95,12 @@ public final class ShipList implements Serializable {
 		ship12.setMaximumload(Constant.smallShipMaxload_10); // 船只最大负载量		
 		ship12.setFreeWeight(Constant.smallShipMaxload_10);
 		shipList.add(ship12);
+		
+		final Ship ship13 = new Ship();
+		ship13.setShipNo("shipNo" + 13); // 船只编号
+		ship13.setMaximumload(Constant.smallShipMaxload_10); // 船只最大负载量		
+		ship13.setFreeWeight(Constant.smallShipMaxload_10);
+		shipList.add(ship13);
 		
 	}
 
