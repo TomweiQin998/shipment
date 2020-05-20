@@ -30,6 +30,7 @@ public class ShipmentImpl implements ShipmentInterface {
 		order = new Order();		
 		
 		int sumQuantity = totalQuantity;
+		System.out.println("\n");
 		System.out.println("待运货物总吨数："+sumQuantity);
 		
 		System.out.println("总运输批次："+version);		

@@ -99,8 +99,8 @@ public class ShipmentImplTest {
 
 		}
 		
-		//超过所有船只运输货物总吨数590
-		Order order5 = (Order) shipmentImpl.decreaseRootQuantity(800, 2, 1, 0, 0);
+		//超过所有船只运输货物总吨数600
+		Order order5 = (Order) shipmentImpl.createOrder(800, 2, 1, 0, 0);
 		OrderDetail orderDetail5 = order5.getOrderDetail();
 		long orderNo5 = orderDetail5.getOrderNo();
 		System.out.println("货运量订单号:" + orderNo5);
