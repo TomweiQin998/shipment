@@ -79,7 +79,7 @@ public class ShipmentImpl implements ShipmentInterface {
 			details.setShips(ships);
 			order.setOrderDetail(details);
 		}else if (sumQuantity > 590 && version > 1) {//11只船总运量590吨所有船装满  则需要 分批次运货 version批次
-			System.out.println("货运量超过船只负载总量  分批次运货");
+			System.out.println("货运量超过所有船只最大负载总量  分批次运货");
 
 			order.setOrderNo(orderNo);
 			order.setOrderQuantity(sumQuantity);
