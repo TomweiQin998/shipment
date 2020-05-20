@@ -38,7 +38,7 @@ public class ShipmentImpl implements ShipmentInterface {
 		
 		System.out.println("新增运货总吨数："+increateRootQuantity);
 		
-		System.out.println("减少运货总吨数："+increateRootQuantity);
+		System.out.println("减少运货总吨数："+decreaseRootQuantity);
 		
 		if (sumQuantity > 0 && sumQuantity <=600 && version==1) {//13只船总运量600吨所有船装满		
 
